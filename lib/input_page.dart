@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-
-const uniColor =  Color(0xFF0A0E21);
+const uniColor =  Color(0xFFFFFFFF);
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -16,14 +16,48 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
         appBar: AppBar(
       backgroundColor: Colors.blueGrey[900],
-      title: const Text(
+      title:Text(
         'Chat GPT',
-        style: TextStyle(
+        style: GoogleFonts.poppins(
           color: Colors.white,
           fontSize: 30.0,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w900,
         ),
       ),
+    ),
+    // Write the code for an input box which will be placed at the end of the screen.
+    body: Column(
+      children: [
+        Expanded(
+          child: Container(
+            margin: const EdgeInsets.all(15.0),
+            decoration: BoxDecoration(
+              color: Colors.blueGrey[900],
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+          ),
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                margin: const EdgeInsets.all(15.0),
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey[900],
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(15.0),
+              decoration: BoxDecoration(
+                color: Colors.blueGrey[900],
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+            ),
+          ],
+        ),
+      ],
     ),
     drawer:Drawer(
       backgroundColor: Colors.blueGrey[900],

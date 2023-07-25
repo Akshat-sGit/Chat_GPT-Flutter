@@ -1,7 +1,7 @@
-import 'package:chat_gpt/chatmessage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'chatmessage.dart';
 import 'threedots.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   void initState() {
     chatGPT = OpenAI.instance.build(
-        token: dotenv.env["API_KEY"],
+        token: dotenv.env["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"],
         baseOption: HttpSetup(receiveTimeout: 60000));
     super.initState();
   }

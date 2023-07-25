@@ -44,17 +44,17 @@ class _InputPageState extends State<InputPage> {
         child: Column(
           children: [
             Flexible(
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.8,
-            )),
-            Expanded(
               child: ListView.builder(
-                padding: const EdgeInsets.all(8.0),
-                reverse: true,
-                itemBuilder: (_, int index) => const Text('Message'),
-              ),
-            ),
-            const Divider(height: 1.0),
+                itemCount: 50,
+                itemBuilder: (context, index) {
+                return Container(
+                  height: MediaQuery.of(context).size.height * 16,
+                  color: Colors.red,
+                  margin:const EdgeInsets.all(16.0),
+                          );
+                }
+                    )
+                    ),
             Container(
               padding:const EdgeInsets.fromLTRB(10,0,0,0),
               decoration: BoxDecoration(

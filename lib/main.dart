@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chat_gpt/input_page.dart';
+import 'package:chat_gpt/chat_screen.dart';
 
 void main() {
   runApp(const MyApp());

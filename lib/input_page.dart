@@ -40,27 +40,29 @@ class _InputPageState extends State<InputPage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Flexible(
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.8,
-          )),
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.all(8.0),
-              reverse: true,
-              itemBuilder: (_, int index) => const Text('Message'),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Flexible(
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.8,
+            )),
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.all(8.0),
+                reverse: true,
+                itemBuilder: (_, int index) => const Text('Message'),
+              ),
             ),
-          ),
-          const Divider(height: 1.0),
-          Container(
-            decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
+            const Divider(height: 1.0),
+            Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).cardColor,
+              ),
+              child: _buildTextComposer(),
             ),
-            child: _buildTextComposer(),
-          ),
-        ]
+          ]
+        ),
       ),
       drawer: Drawer(
         backgroundColor: Colors.blueGrey[900],

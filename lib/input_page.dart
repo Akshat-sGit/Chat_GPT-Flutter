@@ -56,6 +56,7 @@ class _InputPageState extends State<InputPage> {
             ),
             const Divider(height: 1.0),
             Container(
+              padding:const EdgeInsets.fromLTRB(10,0,0,0),
               decoration: BoxDecoration(
                 color: Theme.of(context).cardColor,
               ),

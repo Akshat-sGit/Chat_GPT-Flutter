@@ -18,7 +18,6 @@ class _ChatScreenState extends State<ChatScreen> {
   bool _isImageSearch = false;
 
   bool _isTyping = false;
-
   @override
   void initState() {
     chatGPT = OpenAI.instance.build(
@@ -26,16 +25,13 @@ class _ChatScreenState extends State<ChatScreen> {
         baseOption: HttpSetup(receiveTimeout: 60000));
     super.initState();
   }
-
   @override
   void dispose() {
     chatGPT?.close();
     chatGPT?.genImgClose();
     super.dispose();
   }
-
   // Link for api - https://beta.openai.com/account/api-keys
-
   void _sendMessage() async {
     if (_controller.text.isEmpty) return;
     ChatMessage message = ChatMessage(
@@ -43,14 +39,11 @@ class _ChatScreenState extends State<ChatScreen> {
       sender: "user",
       isImage: false,
     );
-
     setState(() {
       _messages.insert(0, message);
       _isTyping = true;
     });
-
     _controller.clear();
-
     if (_isImageSearch) {
       final request = GenerateImage(message.text, 1, size: "256x256");
 
@@ -66,20 +59,17 @@ class _ChatScreenState extends State<ChatScreen> {
       insertNewData(response.choices[0].text, isImage: false);
     }
   }
-
   void insertNewData(String response, {bool isImage = false}) {
     ChatMessage botMessage = ChatMessage(
       text: response,
       sender: "bot",
       isImage: isImage,
     );
-
     setState(() {
       _isTyping = false;
       _messages.insert(0, botMessage);
     });
   }
-
   Widget _buildTextComposer() {
     return Row(
       children: [
@@ -111,7 +101,6 @@ class _ChatScreenState extends State<ChatScreen> {
       ],
     ).px16();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

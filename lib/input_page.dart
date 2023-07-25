@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:chat_gpt/chatmessage.dart'; 
 
 const uniColor = Color(0xFFFFFFFF);
 
@@ -11,15 +12,17 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-
   final TextEditingController _controller = TextEditingController();
+  final List<ChatMessage> _messages = [];
 
   Widget _buildTextComposer() {
     return Row(
       children: [
-         Expanded(child: TextField(
+        Expanded(
+            child: TextField(
           controller: _controller,
-          decoration:const InputDecoration.collapsed(hintText: 'Send a message'),
+          decoration:
+              const InputDecoration.collapsed(hintText: 'Send a message'),
         )),
         IconButton(onPressed: () {}, icon: const Icon(Icons.send)),
       ],
@@ -41,29 +44,26 @@ class _InputPageState extends State<InputPage> {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Flexible(
+        child: Column(children: [
+          Flexible(
               child: ListView.builder(
-                itemCount: 50,
-                itemBuilder: (context, index) {
-                return Container(
-                  height: MediaQuery.of(context).size.height * 16,
-                  color: Colors.red,
-                  margin:const EdgeInsets.all(16.0),
-                          );
-                }
-                    )
-                    ),
-            Container(
-              padding:const EdgeInsets.fromLTRB(10,0,0,0),
-              decoration: BoxDecoration(
-                color: Theme.of(context).cardColor,
-              ),
-              child: _buildTextComposer(),
+                  itemCount: _messages.length,
+                  itemBuilder: (context, index) {
+                    // return Container(
+                    //   height: MediaQuery.of(context).size.height * 16,
+                    //   color: Colors.red,
+                    //   margin:const EdgeInsets.all(16.0),
+                    // );
+                    return _messages[index];
+                  })),
+          Container(
+            padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+            decoration: BoxDecoration(
+              color: Theme.of(context).cardColor,
             ),
-          ]
-        ),
+            child: _buildTextComposer(),
+          ),
+        ]),
       ),
       drawer: Drawer(
         backgroundColor: Colors.blueGrey[900],

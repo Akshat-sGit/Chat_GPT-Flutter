@@ -23,7 +23,7 @@ class _InputPageState extends State<InputPage> {
         )),
         IconButton(onPressed: () {}, icon: const Icon(Icons.send)),
       ],
-    ).;
+    );
   }
 
   @override

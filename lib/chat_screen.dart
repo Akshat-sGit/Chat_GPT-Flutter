@@ -56,16 +56,16 @@ class _ChatScreenState extends State<ChatScreen> {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Pallete.borderColor, 
-                    width: 2,
+                    width: 4,
                   ),
-                  color: Pallete.borderColor, 
+                  color: Pallete.whiteColor, 
                   borderRadius: BorderRadius.circular(20).copyWith(
                     topLeft:const Radius.circular(0),
                   ),
                 ),
                 child: const Text('Hello, What can I help you with today?',
                 style: TextStyle(
-                  color: Pallete.mainFontColor, 
+                  color: Pallete.blackColor, 
                   fontSize: 16,
                 ),
                 ),

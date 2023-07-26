@@ -15,7 +15,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("ChatGPT"), 
+          title: const Text("SoundGPT"), 
           leading: const Icon(Icons.menu),
           centerTitle: true,
           ),
@@ -75,7 +75,6 @@ class _ChatScreenState extends State<ChatScreen> {
                 padding:const EdgeInsets.all(10),
                 alignment: Alignment.centerLeft,
                 margin: const EdgeInsets.only(
-                  top: 10, 
                   left: 22,
                 ),
                 child:const Text('Here are a few features',
@@ -107,6 +106,10 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ]
           ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.mic),
+          )
       );
   }
 }

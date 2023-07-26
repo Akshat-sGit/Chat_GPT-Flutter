@@ -2,9 +2,11 @@ import 'package:chat_gpt/pallete.dart';
 import 'package:flutter/material.dart';
 
 class FeatureBox extends StatelessWidget {
+
   final Color color;
   final String headerText;
   final String descriptionText;
+
   const FeatureBox({
     super.key,
     required this.color,
@@ -42,7 +44,6 @@ class FeatureBox extends StatelessWidget {
                 ),
               ),
             ),
-            // const SizedBox(height: 3),
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: Text(

@@ -106,6 +106,8 @@ class _ChatScreenState extends State<ChatScreen> {
             ]
           ),
           floatingActionButton: FloatingActionButton(
+            focusColor: Pallete.firstSuggestionBoxColor,
+            backgroundColor: Pallete.secondSuggestionBoxColor,
             onPressed: () {},
             child: const Icon(Icons.mic),
           )

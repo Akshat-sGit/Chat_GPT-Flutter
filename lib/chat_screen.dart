@@ -98,11 +98,11 @@ class _ChatScreenState extends State<ChatScreen> {
                     headerText: 'Dall-E', 
                     descriptionText: 'Get inspired and stay creative with your personal assistant powered by Dall-E',
                   ),
-                  // FeatureBox(
-                  //   color: Pallete.thirdSuggestionBoxColor, 
-                  //   headerText: 'Smart Voice Assistant', 
-                  //   descriptionText: 'Get the best of both worlds with our voice assistant powered by Dall-E and ChatGPT',
-                  // ),
+                  FeatureBox(
+                    color: Pallete.thirdSuggestionBoxColor, 
+                    headerText: 'Smart Voice Assistant', 
+                    descriptionText: 'Get the best of both worlds with our voice assistant powered by Dall-E and ChatGPT',
+                  ),
                 ],
               ),
             ]

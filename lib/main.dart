@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ChatGPT Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.green,
+      theme: ThemeData.light(useMaterial3: true).copyWith(
         useMaterial3: true,
       ),
       home: const ChatScreen(),

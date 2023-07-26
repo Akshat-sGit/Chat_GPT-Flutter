@@ -56,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Pallete.borderColor, 
-                    width: 4,
+                    width: 2,
                   ),
                   color: Pallete.whiteColor, 
                   borderRadius: BorderRadius.circular(20).copyWith(

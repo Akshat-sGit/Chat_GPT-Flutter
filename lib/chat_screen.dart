@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:chat_gpt/Pallete.dart';
-
 import 'package:chat_gpt/feature_box.dart';
 // import 'package:velocity_x/velocity_x.dart';
 

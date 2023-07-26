@@ -31,6 +31,13 @@ class _ChatScreenState extends State<ChatScreen> {
                         shape: BoxShape.circle,
                       ),
                     ),
+                  ),
+                  Container(
+                    height: 123,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle, 
+                      image: DecorationImage(image: AssetImage('assets/images/virtualAssistant.png'))
+                    ),
                   )
                 ],
               )

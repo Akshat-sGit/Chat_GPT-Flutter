@@ -40,7 +40,33 @@ class _ChatScreenState extends State<ChatScreen> {
                     ),
                   )
                 ],
-              )
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20, 
+                  vertical: 5, 
+                ),
+                margin:const EdgeInsets.symmetric(
+                  horizontal: 40, 
+                  vertical: 30, 
+                ).copyWith(
+                  top: 30,  
+                ),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Pallete.borderColor, 
+                    width: 2,
+                  ),
+                  color: Pallete.borderColor, 
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: const Text('Hello, What can I help you with today?',
+                style: TextStyle(
+                  color: Pallete.mainFontColor, 
+                  fontSize: 16,
+                ),
+                ),
+              ) ,
             ]
           ),
       );

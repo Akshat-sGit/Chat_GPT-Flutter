@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:chat_gpt/Pallete.dart';
+
+import 'package:chat_gpt/feature_box.dart';
 // import 'package:velocity_x/velocity_x.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -58,7 +60,9 @@ class _ChatScreenState extends State<ChatScreen> {
                     width: 2,
                   ),
                   color: Pallete.borderColor, 
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(20).copyWith(
+                    topLeft:const Radius.circular(0),
+                  ),
                 ),
                 child: const Text('Hello, What can I help you with today?',
                 style: TextStyle(
@@ -67,6 +71,28 @@ class _ChatScreenState extends State<ChatScreen> {
                 ),
                 ),
               ) ,
+              Container(
+                padding:const EdgeInsets.all(10),
+                alignment: Alignment.centerLeft,
+                margin: const EdgeInsets.only(
+                  top: 10, 
+                  left: 22,
+                ),
+                child:const Text('Here are a few features',
+                  style: TextStyle(
+                    color: Pallete.mainFontColor, 
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ), 
+              const Column(
+                children: [
+                  FeatureBox(color: Pallete.firstSuggestionBoxColor),
+                  FeatureBox(color: Pallete.secondSuggestionBoxColor),
+                  FeatureBox(color: Pallete.thirdSuggestionBoxColor),
+                ],
+              ),
             ]
           ),
       );

@@ -88,9 +88,21 @@ class _ChatScreenState extends State<ChatScreen> {
               ), 
               const Column(
                 children: [
-                  FeatureBox(color: Pallete.firstSuggestionBoxColor),
-                  FeatureBox(color: Pallete.secondSuggestionBoxColor),
-                  FeatureBox(color: Pallete.thirdSuggestionBoxColor),
+                  FeatureBox(
+                    color: Pallete.firstSuggestionBoxColor, 
+                    headerText: 'Chat GPT', 
+                    descriptionText: 'A smarter to stay organized and informed with ChatGPT',
+                  ),
+                  FeatureBox(
+                    color: Pallete.secondSuggestionBoxColor, 
+                    headerText: 'Dall-E', 
+                    descriptionText: 'Get inspired and stay creative with your personal assistant powered by Dall-E',
+                  ),
+                  FeatureBox(
+                    color: Pallete.thirdSuggestionBoxColor, 
+                    headerText: 'Smart Voice Assistant', 
+                    descriptionText: 'Get the best of both worlds with our voice assistant powered by Dall-E and ChatGPT',
+                  ),
                 ],
               ),
             ]
